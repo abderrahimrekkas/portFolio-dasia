@@ -1,5 +1,5 @@
 import React from 'react';
-import babujiPicture from "../docs/Babuji_homePage.jpeg"
+import abderrahimrekkas from "../docs/abderrahimrekkas.JPG"
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ const Home = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
-              Hi, I'm <span className="text-primary-600 dark:text-primary-400">Babuji Telagathoti</span>
+              Hi, I'm <span className="text-primary-600 dark:text-primary-400">abderrahim rekkas</span>
             </motion.h1>
             
             <motion.h2
@@ -39,7 +39,7 @@ const Home = () => {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-2xl"
             >
-              Proficient MERN Stack Developer with 4+ years of hands-on experience in building responsive, 
+              Proficient MERN Stack Developer with 1+ years of hands-on experience in building responsive, 
               dynamic web applications. Skilled in React.js, Node.js, Express.js, and MongoDB, with expertise 
               in translating complex business requirements into scalable technical solutions.
             </motion.p>
@@ -81,7 +81,7 @@ const Home = () => {
             {/* Inner white/dark background */}
             <div className="absolute inset-6 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
               <img
-                src={babujiPicture}
+                src={abderrahimrekkas}
                 alt="Babuji Telagathoti"
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
               />

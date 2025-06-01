@@ -1,15 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import  image1111  from '../docs/image1111.png';
 import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
-  FaDocker,
-  FaAws,
-  FaJava,
-  FaJenkins,
+
+ 
 } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiTailwindcss, SiSpringboot, SiPostgresql, SiMysql } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiTailwindcss,  } from 'react-icons/si';
 
 const About = () => {
   const skills = [
@@ -17,14 +16,7 @@ const About = () => {
     { name: 'Node.js', icon: <FaNodeJs className="h-8 w-8" /> },
     { name: 'MongoDB', icon: <SiMongodb className="h-8 w-8" /> },
     { name: 'Express.js', icon: <SiExpress className="h-8 w-8" /> },
-    { name: 'Java', icon: <FaJava className="h-8 w-8" /> },
-    { name: 'Spring Boot', icon: <SiSpringboot className="h-8 w-8" /> },
-    { name: 'PostgreSQL', icon: <SiPostgresql className="h-8 w-8" /> },
-    { name: 'MySQL', icon: <SiMysql className="h-8 w-8" /> },
     { name: 'Git', icon: <FaGitAlt className="h-8 w-8" /> },
-    { name: 'Docker', icon: <FaDocker className="h-8 w-8" /> },
-    { name: 'AWS', icon: <FaAws className="h-8 w-8" /> },
-    { name: 'Jenkins', icon: <FaJenkins className="h-8 w-8" /> },
     { name: 'Tailwind', icon: <SiTailwindcss className="h-8 w-8" /> },
   ];
 
@@ -44,11 +36,11 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <img
-                src="/your-photo.jpg"
-                alt="Babuji Telagathoti"
-                className="rounded-lg shadow-lg w-full max-w-md mx-auto"
-              />
+               <img
+       src={image1111}
+       alt="abderrahim rekkas"
+       className="w-full h-full object-cover"
+          />
             </motion.div>
             
             <motion.div
@@ -61,9 +53,9 @@ const About = () => {
                 Full Stack Developer
               </h2>
               <p className="text-gray-600 dark:text-gray-400">
-                I'm a Full Stack Developer with 4+ years of experience in building responsive, 
+                I'm a Full Stack Developer with 1+ years of experience in building responsive, 
                 dynamic web applications. Currently working at UF Health in Jacksonville, FL, 
-                where I specialize in MERN stack development and Java/Spring Boot integrations.
+                where I specialize in MERN stack development .
               </p>
               <p className="text-gray-600 dark:text-gray-400">
                 My expertise includes modernizing legacy systems, implementing RESTful APIs, 

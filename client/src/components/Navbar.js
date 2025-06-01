@@ -10,7 +10,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Resume', path: '/resume' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -19,7 +18,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-xl font-bold text-primary-600 dark:text-primary-400">
-            Babuji Telagathoti
+           abderrahim rekkas
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

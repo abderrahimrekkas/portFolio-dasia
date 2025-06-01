@@ -1,53 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 // import axios from 'axios';
-import hotelBooking from '../docs/hotelBooking.jpg';
-import filmClub from '../docs/filmClub.jpg';
-import portfolio from '../docs/portfolio.png';
+import image1 from '../docs/image1.png';
+import image11 from '../docs/image11.png';
+import image111 from '../docs/image111.png';
 
 const Projects = () => {
   const [projects] = useState([
     {
-      title: "Hotel Booking Platform",
-      description: "Developed booking system using React.js and Java backend with MongoDB; implemented GET/fetch methods and Bootstrap UI.",
-      image: hotelBooking,
-      technologies: ["React.js", "Java", "MongoDB", "Bootstrap"],
-      github: "https://github.com/yourusername/hotel-booking",
-      live: "https://hotel-booking-platform-2025.netlify.app/"
-    },
-    {
-      title: "Film Club Web App",
-      description: "Built a dynamic MERN stack application with React frontend, Node.js/Express backend, and MongoDB; implemented full CRUD operations, Axios integration, and API testing using Postman.",
-      image: filmClub,
+      title: "J’ai développé CookSecure",
+      description: "J’ai développé CookSecure, une application de gestion de recettes avec navigation sécurisée selon l’authentification et les rôles.",
+      image: image1,
       technologies: ["MERN Stack", "React", "Node.js", "Express", "MongoDB", "Axios", "Postman"],
-      github: "https://github.com/yourusername/film-club",
-      live: "https://film-club-app-2025.netlify.app/"
+      github: "https://github.com/abderrahimrekkas/CookSecure-",
+      
     },
     {
-      title: "Portfolio Website",
-      description: "Designed and deployed a personal portfolio showcasing frontend projects using React, hosted via Netlify.",
-      image: portfolio,
-      technologies: ["React", "Tailwind CSS", "Netlify"],
-      github: "https://github.com/yourusername/portfolio",
-      live: "https://your-portfolio.netlify.app"
+      title: "application de quiz connectée à l’API Trivia avec React",
+      description: "J’ai développé une application de quiz connectée à l’API Trivia avec React, TypeScript et Tailwind CSS. L’application permet aux utilisateurs de répondre à des questions de quiz en temps réel, avec une interface utilisateur réactive et moderne.",
+      image: image11,
+      technologies: ["MERN Stack", "React", "Node.js", "Express", "MongoDB", "Axios", "Postman"],
+      github: "https://github.com/abderrahimrekkas/Architecture-Technique",
+      
+    },
+    {
+      title: "PApplication de consultation de films avec API externe",
+      description: "J’ai développé une application web en React JS permettant de consulter des informations actualisées sur des films et séries via l’API TMDb.",
+      image: image111,
+      technologies: ["MERN Stack", "React", "Node.js", "Express", "MongoDB", "Axios", "Postman"],
+      github: "https://github.com/abderrahimrekkas/AbderrahimFilm",
+    
     }
   ]);
-
-  const [filter, setFilter] = useState('All');
-  const [filteredProjects, setFilteredProjects] = useState(projects);
-
-  const technologies = ['All', ...new Set(projects.flatMap(project => project.technologies))];
-
-  useEffect(() => {
-    if (filter === 'All') {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(projects.filter(project => 
-        project.technologies.includes(filter)
-      ));
-    }
-  }, [filter, projects]);
-
+  const [filteredProjects] = useState(projects);
   return (
     <div className="min-h-[calc(100vh-4rem)] py-12">
       <div className="container mx-auto px-4">
@@ -59,23 +44,7 @@ const Projects = () => {
         >
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">My Projects</h1>
           
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {technologies.map((tech) => (
-              <button
-                key={tech}
-                onClick={() => setFilter(tech)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
-                  ${filter === tech 
-                    ? 'bg-primary-600 text-white' 
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900'
-                  }`}
-              >
-                {tech}
-              </button>
-            ))}
-          </div>
-
+      
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
@@ -101,14 +70,7 @@ const Projects = () => {
                     >
                       GitHub
                     </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-primary-400 transition-colors"
-                    >
-                      Live Demo
-                    </a>
+                    
                   </div>
                 </div>
                 <div className="p-6">
